@@ -1,0 +1,568 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+.navbar {
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    display: flex;
+}
+.nav-logo {
+    width: 20%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+.nav-logo img {
+    width: 250px;
+    cursor: pointer;
+}
+.nav-search {
+    width: 40%;
+    height: 100%;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+}
+.search-box {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+.search-logo, .clear-search {
+    width: 8%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 20px;
+    color: red;
+}
+.clear-search {
+    cursor: pointer;
+    display: none;
+}
+.search-box input {
+    width: 84%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    font-size: 18px;
+    background-color: transparent;
+    color: red;
+}
+.search-box input::placeholder {
+    color: red;
+}
+.nav-settings {
+    width: 40%;
+    height: 100%;
+    display: flex;
+}
+.account, .more, .cart {
+    width: calc(100% / 3);
+    height: 100%;
+}
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+.account #greet {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.account #user {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: -30px;
+}
+.account #user:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: red;
+}
+.more-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.down-logo {
+    margin-left: 10px;
+    font-size: 20px;
+}
+.up-logo {
+    margin-left: 10px;
+    font-size: 20px;
+    display: none;
+}
+.dropdown-menu {
+    width: 200px;
+    height: 270px;
+    position: absolute;
+    top: 77px;
+    right: 195px;
+}
+.nature {
+    display: none;
+}
+.dropdown-menu .triangle {
+    width: 100%;
+    height: 5%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: red;
+}
+.dropdown-menu .menu-list {
+    width: 100%;
+    height: 95%;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: white;
+    background-color: red;
+}
+.dropdown-menu .menu-list p {
+    margin-top: 15px;
+}
+.dropdown-menu .menu-list p i {
+    font-size: 16px;
+    margin-right: 5px;
+}
+.dropdown-menu .menu-list p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: red;
+}
+.cart-count {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+.cart-logo {
+    display: flex;
+    align-items: baseline;
+}
+.cart-logo p {
+    font-size: 30px;
+    margin-right: 12px;
+}
+.cart-logo p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.body-container {
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.body-container::-webkit-scrollbar {
+    display: none;
+}
+.body {
+    width: 100%;
+    height: 670px;
+    display: flex;
+}
+.left-body {
+    width: 20%;
+    height: 100%;
+}
+.body-title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    padding-left: 15px;
+    font-weight: 500;
+    background-color: red;
+    color: white;
+}
+.body-types {
+    width: 100%;
+    height: 90%;
+    padding-top: 30px;
+}
+.body-types .item {
+    width: 100%;
+    height: 8%;
+    color: red;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.body-types .item:hover {
+    background-color: red;
+    color: white;
+}
+.body-types .bg {
+    background-color: red;
+    color: white;
+}
+.home-body, .seperate-body, .item-details, .cart-items, .search-body {
+    width: 80%;
+    height: 100%;
+    padding: 0px 40px 30px 40px;
+    overflow: auto;
+}
+.seperate-body, .item-details, .cart-items, .search-body {
+    display: none;
+}
+.home-body::-webkit-scrollbar, .seperate-body::-webkit-scrollbar, .search-body::-webkit-scrollbar {
+    display: none;
+}
+.clothes-sec {
+    width: 100%;
+    min-height: 50%;
+    margin-top: 30px;
+}
+.clothes-title {
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+    color: red;
+}
+.clothes-items {
+    width: 100%;
+    min-height: 305px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.clothes-item {
+    width: 250px;
+    height: 300px;
+    margin: 20px 25px 0px 0px;
+}
+.cart-heading {
+    width: 100%;
+    height: 10%;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    color: red;
+}
+.cart-sec {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+.cart-itemSec {
+    width: 70%;
+    height: 100%;
+    overflow: auto;
+}
+.cart-itemSec::-webkit-scrollbar {
+    display: none;
+}
+.cart-listItem {
+    width: 97%;
+    height: 150px;
+    background-color: red;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+}
+.remove-item {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: red;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.remove-item i {
+    cursor: pointer;
+}
+.cart-itemImage {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-itemImage img {
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+}
+.cart-itemInfo {
+    width: 70%;
+    height: 100%;
+    display: flex;
+}
+.itemInfo-details {
+    width: 60%;
+    height: 100%;
+    padding-left: 30px;
+    color: white;
+}
+.itemInfo-name {
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+.itemInfo-price {
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+}
+.itemInfo-total {
+    width: 40%;
+    height: 100%;
+}
+.total-cost {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+}
+.item-qty {
+    width: 100%;
+    height: 50%;
+}
+.qty-box {
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+    color: red;
+}
+.qty-title {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 25px;
+}
+.qty-count {
+    width: 30%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 25px;
+}
+.qty-change {
+    width: 30%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 20px;
+}
+.qty-change p i {
+    cursor: pointer;
+}
+.cart-checkout {
+    width: 30%;
+    height: 100%;
+}
+.check-list {
+    width: 100%;
+    height: 350px;
+    background-color: red;
+    border-radius: 5px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.check-title {
+    width: 100%;
+    height: 15%;
+    font-size: 30px;
+}
+.check-subtotal, .check-delivery, .check-total {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+}
+.check-button {
+    width: 100%;
+    height: 20%;
+}
+.check-button button {
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    font-size: 25px;
+    border: none;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+.check-button button:hover {
+    background-color: whitesmoke;
+}
+.image-div {
+    width: 100%;
+    height: 70%;
+}
+.image-div img {
+    width: 100%;
+    height: 100%;
+}
+.details-div {
+    width: 100%;
+    height: 30%;
+    background-color: red;
+    color: white;
+}
+.name-div {
+    width: 100%;
+    height: 50%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+.name-div p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.price-div {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.price {
+    width: 75%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.item-cart {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-color: white;
+    color: red;
+}
+.itemDetails {
+    width: 100%;
+    height: 90%;
+    margin-top: 30px;
+    display: flex;
+}
+.item-image {
+    width: 40%;
+    height: 100%;
+}
+.item-image img {
+    width: 100%;
+    height: 100%;
+}
+.item-info {
+    width: 60%;
+    height: 100%;
+    padding-left: 30px;
+    color: red;
+}
+.item-heading {
+    width: 100%;
+    height: 10%;
+    font-size: 35px;
+}
+.item-price {
+    width: 100%;
+    height: 8%;
+    font-size: 25px;
+}
+.item-rating {
+    width: 100%;
+    height: 7%;
+    font-size: 20px;
+}
+.item-desc {
+    width: 100%;
+    height: 65%;
+    font-size: 20px;
+    padding-top: 30px;
+}
+.item-add {
+    width: 100%;
+    height: 10%;
+}
+.item-add button {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: red;
+    font-size: 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.footer {
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+.top-navigation {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: red;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    display: grid;
+    place-content: center;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}

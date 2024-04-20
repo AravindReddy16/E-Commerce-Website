@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>E-Commerce</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="nav-logo">
+          <img src="images/logo.png" alt="logo" id="logo" />
+        </div>
+        <div class="nav-search">
+          <div class="search-box">
+            <div class="search-logo">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input
+              type="text"
+              id="search"
+              placeholder="Search Cloths, Toys, Furniture..."
+            />
+            <div class="clear-search">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+        </div>
+        <div class="nav-settings">
+          <div class="account">
+            <p id="greet">Welcome by,</p>
+            <p id="user">AravindReddy</p>
+          </div>
+          <div class="more">
+            <div class="more-name">
+              <p>Settings</p>
+            </div>
+            <div class="down-logo">
+              <i class="fa-sharp fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="up-logo">
+              <i class="fa-solid fa-chevron-up"></i>
+            </div>
+          </div>
+          <div class="dropdown-menu nature">
+            <div class="triangle">
+              <i class="fa-sharp fa-solid fa-caret-up"></i>
+            </div>
+            <div class="menu-list">
+              <p><i class="fa-solid fa-play"></i> Address</p>
+              <p><i class="fa-solid fa-play"></i> Orders</p>
+              <p><i class="fa-solid fa-play"></i> Theme</p>
+              <p><i class="fa-solid fa-play"></i> About</p>
+              <p><i class="fa-solid fa-play"></i> Logout</p>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="cart-logo">
+              <p id="cart-list">Cart</p>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="cart-count">
+              <p id="cart-itemCount"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body-container">
+        <div class="body">
+          <div class="left-body">
+            <div class="body-title">
+              <p>Find your Favourite Things :</p>
+            </div>
+            <div class="body-types">
+              <div class="item bg">
+                <p>All</p>
+              </div>
+              <div class="item">
+                <p>Clothes</p>
+              </div>
+              <div class="item">
+                <p>Toys</p>
+              </div>
+              <div class="item">
+                <p>Furniture</p>
+              </div>
+              <div class="item">
+                <p>Electronics</p>
+              </div>
+              <div class="item">
+                <p>Shoes</p>
+              </div>
+              <div class="item">
+                <p>Groceries</p>
+              </div>
+              <div class="item">
+                <p>Medicine</p>
+              </div>
+              <div class="item">
+                <p>Cosmotics</p>
+              </div>
+            </div>
+          </div>
+          <div class="search-body">
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Result</p>
+              </div>
+              <div class="clothes-items search-container"></div>
+            </div>
+          </div>
+          <div class="home-body">
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Clothes</p>
+              </div>
+              <div class="clothes-items clothes"></div>
+            </div>
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Toys</p>
+              </div>
+              <div class="clothes-items toys"></div>
+            </div>
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Furniture</p>
+              </div>
+              <div class="clothes-items furniture"></div>
+            </div>
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Electronics</p>
+              </div>
+              <div class="clothes-items electronics"></div>
+            </div>
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Shoes</p>
+              </div>
+              <div class="clothes-items shoes"></div>
+            </div>
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Groceries</p>
+              </div>
+              <div class="clothes-items groceries"></div>
+            </div>
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Medicine</p>
+              </div>
+              <div class="clothes-items medicine"></div>
+            </div>
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p>Cosmotics</p>
+              </div>
+              <div class="clothes-items cosmotics"></div>
+            </div>
+          </div>
+          <div class="seperate-body">
+            <div class="clothes-sec">
+              <div class="clothes-title">
+                <p id="list-name"></p>
+              </div>
+              <div class="clothes-items seperate"></div>
+            </div>
+          </div>
+          <div class="item-details"></div>
+          <div class="cart-items">
+            <div class="cart-heading">
+              <p>Cart</p>
+            </div>
+            <div class="cart-sec">
+              <div class="cart-itemSec"></div>
+              <div class="cart-checkout">
+                <div class="check-list">
+                  <div class="check-title">
+                    <p>Cart Total:</p>
+                  </div>
+                  <div class="check-subtotal">
+                    <p>SubTotal:</p>
+                    <p id="subtotal">$0</p>
+                  </div>
+                  <div class="check-delivery">
+                    <p>Delivery:</p>
+                    <p>Free</p>
+                  </div>
+                  <div class="check-total">
+                    <p>Total:</p>
+                    <p id="checktotal">$0</p>
+                  </div>
+                  <div class="check-button">
+                    <button type="submit">Checkout</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <p>This is Footer. Design under work.</p>
+        </div>
+        <div class="top-navigation">
+          <i class="fa-solid fa-chevron-up"></i>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
